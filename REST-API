@@ -1,0 +1,56 @@
+-> Understanding Representational State Transfer(REST)
+-> Resources/ Nouns vs Actions
+-> Breaking down the definition of REST
+   - What is Representation
+   - What is State?Does it mean session state
+   - What is transfer?
+   - Understanding the definition put together
+-> Set of Architectural Constraints
+-> Introducing JSON in REST
+-> Introducing HTTP protocol
+
+Need of Rest API
+->Softwares are Huge and complex, so they place numerous demands on software architectures.
+  We need seperated client and server. In rest we have separate client and server. And both the server and client
+  can evolve sepaerately. This means rest allows you to built loosely coupled application. Client may work on angular
+  and server might work on Reactjs. Client and server need not worry about each other technology so that both evolve 
+  independently.
+-> Rest is independent of platforms and languaes
+-> Flexibility and scalability
+-> Not constrained to one format. Can return (XML,JSON,etc)
+-> Since built on top of HTTP, can take advantageof HTTP cache.
+-> Easy to use
+-> Discoverability
+
+What is web?
+Interconnected Networks
+
+What is API?
+Application programming Interface.It is used to connect systems working on different platforms
+
+What is a web server? Why we need it?
+Interprets the client request and prepares the response for the client. That software is called web server.
+Ex. IIS
+
+Why we need web API?
+Because we have distributed nature of web applications.
+Example I have an application which has maps and order portal. So I used google API
+to use google maps service and amazon API to use order service. Now to communicate between distributed
+web applications we need Web API.
+
+Web API is a technolgy offered by microsoft to build REST API's.
+
+SOAP
+-> Another category of API exists called SOAP
+What is SOAP?
+-> Simple Object Access Protocol
+-> Can be built using WCF (windows communication foundation)
+-> Return XML
+-> Web services are nothing but SOAP services.
+(whenever somebody says web API it means REST api and whenever somebody days Web API it means Web Services)
+
+Q) Which one is prefered, SOAP or REST? Why?
+SOAP and REST categorize to different needs of different set of software applications.
+->Rest is an architectural style
+->SOAP is a protocol
+(So no comparision b/w both)
