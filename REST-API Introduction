@@ -1,13 +1,29 @@
 -> Understanding Representational State Transfer(REST)
+   - REST is an architectural style used for building loosely coupled web applicationsover the internet.
+   - Restful is referred to web services that implement REST
+   - It is simply a program that returns data from the database to the client in a format that it requests.
+   - It is based on HTTP, it retrieves data through standard HTTP methods: Get,Put,Post,Delete
 -> Resources/ Nouns vs Actions
 -> Breaking down the definition of REST
-   - What is Representation
-   - What is State?Does it mean session state
+   - What is Representation (Represntation of resource e.g. profuct/1)
+   - What is State?Does it mean session state (state of a resource at a particular timem(e.g. cost of something maybe different at different time so cost is state of resource, its not session state)
    - What is transfer?
+   
    - Understanding the definition put together
+    So REST is the Transfer of the state of the representation of a resource. 
+
 -> Set of Architectural Constraints
--> Introducing JSON in REST
+-> Introducing JSON in REST (light and easy to transfer { id:1 
+                                                        Name:Milk
+                                                        cost:30
+                                                        }
 -> Introducing HTTP protocol
+To clearify what action do the server has to perform on the client request we use HTTP protocol
+It has 4 verbs
+- HTTP get -> when you send request with http get it knows that it has to get the data for the client
+- HTTP put
+- HTTP post -> to add resource on the server we used post
+- HTTP delete -> in this case it knows that it has to delete particular resource on the server 
 
 Need of Rest API
 ->Softwares are Huge and complex, so they place numerous demands on software architectures.
