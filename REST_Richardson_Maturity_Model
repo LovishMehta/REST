@@ -1,0 +1,48 @@
+Richardson Maturity Model is a model developd by Leonard Richardson
+-> It grades APIs by their restful maturity.
+
+-> Thereare 4 levels. Only when the APIs reach the level 4, we can talk about restful APIs.
+The levels are
+ - Level 0 
+ - Level 1
+ - Level 2
+ - Level 3
+ -> Level 4: REST API
+ 
+ -> Level 0- Plain old XML and there is only one URI
+    - HTTP is used only as a transport protocol. HTTP is used for remote interaction.
+    - To get the data and to post data we send request to same URL.
+    - We use only one method of HTTP i.e POST
+    E.g.
+     -To get the data
+       POST http://localhost:400/customer
+     
+     -To post the data
+       POST http://localhost:400/customer
+  
+  -> Level 1- In level 1, each resource is mapped to a specific URI,
+        For example: the URI to get products
+        http://localhost:2300/products
+        
+        To get URI for a specific product
+        http://localhost:2300/product/1
+        
+        Still only one HTTP method (POST) is still used for retrieving & creating data.
+   
+   -> Level 2, correct verbs are used with each request
+        For get we use http get
+        For put we use http put
+        For post we use http post
+        For delete we use http delete
+      - For each of those requests, correct HTTP response code is provided.
+      - Example 
+           GET http://localhost:2300/customers
+           200 OK
+    
+   -> Level 3, it has features provided in lvl 1&2 and other than that it has APIs support for HATEOS
+      - Example 
+           GET http://localhost:2300/customers 
+           for this, the response that we get is Customer JSON + Self documenting Hypermedia( linkswhich basically tells that my customer might have placed)
+           
+        - Helps in Self-documentation
+ 
