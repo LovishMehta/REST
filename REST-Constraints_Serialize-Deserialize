@@ -1,0 +1,81 @@
+Few constraints of REST
+  1) Client-Server:
+    - The constraint states that a REST application should have a Client Server architecture. The client and Server should be seperated.
+    - Advantage is Client and Server are seperated so they can evolve independently.
+    - Clients need not know anything about business logic/data access layer.
+    - Servers need not know anything about the frontend UI.
+    
+  2) Stateless
+    - Stateless constraint states that the Server does not store any session data. It means everything that server needs to understand
+      w.r.t. a particular resource has to be contained within the particular request and server will not store any data related to the client.
+      Whereas client is free to store the session information in its own context.
+    - The communication between the Client & Server is stateless. It means that all the information to understand a requesr is contained 
+      within the request.
+    - Improves scalability and visibility
+   Disadvantage
+   - Due to high amount of data sent by the client to server it decreases network optimization or requires more network bandwidth 
+    
+  3) Cache: 
+    - The cache constraint states that when server sends the response to the client in the response it should indicate that the response can be
+      cached or not and for how much duration can the response be cached on the client side.
+    - It requires that every response should include whether a response can be cacheable or not. Because of this client need not to send the 
+      additional request to the server to fetch the same data which actually improves your network optimization.
+    - For subsequent requests, the Client can retrieve from its cache and no need to send request to the server again. This reduces network latency.
+    Disadvantage
+    - The users may have to deal with the stale data.
+    
+  4) Uniform Interface: this constraint is the key differentiator between REST & Non-REST API's.
+     There are different varieties of devices out there like mobiles, laptops, tablets, desktop computers so each and every device should not be
+     requiring different ways of interacting with the server. This means different software applications require uniform method of enquiry with the server.
+     There are 4 elements of Uniform Interface constraint.
+     - Identification of Resources( typically by an URI: uniform resource identifiers)
+     - Manipulation of Resources through representations.
+     - Self-descriptive messages for each request.
+     - HATEOS(Hypermedia As The Engine Of application State) which basically means that you need to include links for each response so that client can discover other 
+       responses very esily.
+   Advantage
+   Promotes generality as all components interact in the same way.
+  
+  5) Layered System:
+  - This constraint tells that the architecture needs to be composed of multiple layers.
+  - Each layer doesn't know anything beyond the immediate layer.
+  - Because of this it limits the amount of complexity that can be introduced at any single layer as the layers are completely decoupled.
+  Advantage
+  Security, it is more secure
+  
+  Disadvantage
+  Latency
+  
+  6) Code on Demand (optional constraint)
+  Normaly a client will download the data from Web Api whereas the code on demand constraint says that
+  in addition to data, the servers can provide executable code(like java script) to the client.
+  Client can download the code and execute it on their side
+  But this can cause severe security threat that's why it is kept optional.
+  
+Serialization
+-> What is Serialization?
+  - It is Converting Objects to string
+  - String  is a series of characters sent at a time.
+  - Objects can be serialized to any encoding format. Popular ones are XML & JSON.
+  
+|        |  Request      |        |
+| Client | ------------->| Server |  
+|        | <-------------|        |    
+|        |   Response    |        | 
+            needs to be 
+            serialized
+
+Why it is needed?
+In programming languages like dot net and java we work with obejcts. And in real world hardware only understands 0's and 1's
+so it is required to convert objects in string so that it can be transmitted by the server to the client.
+
+Deserialization
+What is Deserialization?
+- Converting JSON string to Objects.
+- We can Deserialize from any encoding format. Popular ones are XML and JSON.
+  
+ Why it is needed?
+ At the client side the client application does not understand string format so again it required to converted in object format.
+ 
+ 
+ 
